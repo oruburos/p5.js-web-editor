@@ -51,6 +51,7 @@ export function setLineNumbers(value) {
 }
 
 export function setAutosave(value) {
+  console.log('moviendo autosave');
   return (dispatch, getState) => {
     dispatch({
       type: ActionTypes.SET_AUTOSAVE,
@@ -173,6 +174,30 @@ export function setTheme(value) {
       const formParams = {
         preferences: {
           theme: value
+        }
+      };
+      updatePreferences(formParams, dispatch);
+    }
+  };
+}
+
+export function setLanguage(value) {
+  // return {
+  //   type: ActionTypes.SET_Language,
+  //   value
+  // };
+  console.log('setting language');
+  console.log(value);
+  return (dispatch, getState) => {
+    dispatch({
+      type: ActionTypes.SET_LANGUAGE,
+      value
+    });
+    const state = getState();
+    if (state.user.authenticated) {
+      const formParams = {
+        preferences: {
+          language: value
         }
       };
       updatePreferences(formParams, dispatch);

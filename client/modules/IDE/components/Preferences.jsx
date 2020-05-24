@@ -23,6 +23,7 @@ class Preferences extends React.Component {
     this.increaseFontSize = this.increaseFontSize.bind(this);
     this.decreaseFontSize = this.decreaseFontSize.bind(this);
     this.setFontSize = this.setFontSize.bind(this);
+    this.handleLanguage = this.handleLanguage.bind(this);
 
     this.state = {
       fontSize: props.fontSize
@@ -85,12 +86,18 @@ class Preferences extends React.Component {
 
   handleLineNumbers(event) {
     const value = event.target.value === 'true';
+    console.log(event);
     this.props.setLineNumbers(value);
+  }
+  handleLanguage(event) {
+    console.log(event);
+    this.props.setLanguage(event.target.value);
   }
 
   render() {
     const beep = new Audio(beepUrl);
-
+    console.log('En render de preferencia/language');
+    console.log(this.props.language);
     return (
       <section className="preferences">
         <Helmet>
@@ -101,6 +108,7 @@ class Preferences extends React.Component {
             <div className="preference__subheadings">
               <Tab><h4 className="preference__subheading">General Settings</h4></Tab>
               <Tab><h4 className="preference__subheading">Accessibility</h4></Tab>
+              <Tab><h4 className="preference__subheading">Language</h4></Tab>
             </div>
           </TabList>
           <TabPanel>
@@ -336,6 +344,46 @@ class Preferences extends React.Component {
               </div>
             </div>
           </TabPanel>
+          <TabPanel>
+            <div className="preference">
+              <h4 className="preference__title">Language</h4>
+              <div className="preference__options">
+                <input
+                  type="radio"
+                  onChange={() => this.props.setLanguage('en')}
+                  aria-label="lang eng on"
+                  name="lang pref"
+                  id="lang-en-on"
+                  className="preference__radio-button"
+                  value="en"
+                  checked={this.props.language === 'en'}
+                />
+                <label htmlFor="lang-en-on" className="preference__option">EN</label>
+                <input
+                  type="radio"
+                  onChange={() => this.props.setLanguage('es')}
+                  aria-label="lang es on"
+                  name="lang pref"
+                  id="lang-es-on"
+                  className="preference__radio-button"
+                  value="es"
+                  checked={this.props.language === 'es'}
+                />
+                <label htmlFor="lang-es-on" className="preference__option">ES</label>
+                <input
+                  type="radio"
+                  onChange={() => this.props.setLanguage('it')}
+                  aria-label="lan it on"
+                  name="lang pref"
+                  id="lang-it-on"
+                  className="preference__radio-button"
+                  value="it"
+                  checked={this.props.language === 'it'}
+                />
+                <label htmlFor="lang-it-on" className="preference__option">IT</label>
+              </div>
+            </div>
+          </TabPanel>
         </Tabs>
       </section>
     );
@@ -359,6 +407,8 @@ Preferences.propTypes = {
   setSoundOutput: PropTypes.func.isRequired,
   lintWarning: PropTypes.bool.isRequired,
   setLintWarning: PropTypes.func.isRequired,
+  setLanguage: PropTypes.func.isRequired,
+  language: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,
   setTheme: PropTypes.func.isRequired,
 };

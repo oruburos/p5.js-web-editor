@@ -1,7 +1,7 @@
 import * as ActionTypes from '../../../constants';
 
 const initialState = {
-  fontSize: 18,
+  fontSize: 30,
   autosave: true,
   linewrap: true,
   lineNumbers: true,
@@ -9,7 +9,8 @@ const initialState = {
   textOutput: false,
   gridOutput: false,
   soundOutput: false,
-  theme: 'light',
+  theme: 'dark',
+  language: 'it',
   autorefresh: false
 };
 
@@ -33,6 +34,8 @@ const preferences = (state = initialState, action) => {
       return action.preferences;
     case ActionTypes.SET_THEME:
       return Object.assign({}, state, { theme: action.value });
+    case ActionTypes.SET_LANGUAGE:
+      return Object.assign({}, state, { language: action.value });
     case ActionTypes.SET_AUTOREFRESH:
       return Object.assign({}, state, { autorefresh: action.value });
     case ActionTypes.SET_LINE_NUMBERS:

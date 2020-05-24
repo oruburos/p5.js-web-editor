@@ -26,7 +26,7 @@ function About(props) {
         </p>  */}
       </div>
       <div className="about__content-column">
-        <h3 className="about__content-column-title">New to p5.js?</h3>
+        <h3 className="about__content-column-title">New to p5.js GSOC Version?</h3>
         <p className="about__content-column-list">
           <a
             href="https://p5js.org/examples/"

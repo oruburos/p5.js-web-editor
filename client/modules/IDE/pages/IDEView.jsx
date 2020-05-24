@@ -33,6 +33,7 @@ import Searchbar from '../components/Searchbar';
 import AssetList from '../components/AssetList';
 import About from '../components/About';
 import Feedback from '../components/Feedback';
+import Language from '../components/Language';
 
 class IDEView extends React.Component {
   constructor(props) {
@@ -214,6 +215,8 @@ class IDEView extends React.Component {
               setSoundOutput={this.props.setSoundOutput}
               theme={this.props.preferences.theme}
               setTheme={this.props.setTheme}
+              language={this.props.preferences.language}
+              setLanguage={this.props.setLanguage}
             />
           </Overlay>
         }
@@ -397,6 +400,16 @@ class IDEView extends React.Component {
             <About previousPath={this.props.ide.previousPath} />
           </Overlay>
         }
+        { this.props.location.pathname === '/language' &&
+        <Overlay
+          title="Language"
+          previousPath={this.props.ide.previousPath}
+          ariaLabel="language"
+        >
+          <Language previousPath={this.props.ide.previousPath} />
+        </Overlay>
+        }
+
         { this.props.location.pathname === '/feedback' &&
           <Overlay
             title="Submit Feedback"
@@ -512,6 +525,7 @@ IDEView.propTypes = {
     gridOutput: PropTypes.bool.isRequired,
     soundOutput: PropTypes.bool.isRequired,
     theme: PropTypes.string.isRequired,
+    language: PropTypes.string.isRequired,
     autorefresh: PropTypes.bool.isRequired
   }).isRequired,
   closePreferences: PropTypes.func.isRequired,
@@ -572,6 +586,7 @@ IDEView.propTypes = {
   route: PropTypes.oneOfType([PropTypes.object, PropTypes.element]).isRequired,
   setUnsavedChanges: PropTypes.func.isRequired,
   setTheme: PropTypes.func.isRequired,
+  setLanguage: PropTypes.func.isRequired,
   endSketchRefresh: PropTypes.func.isRequired,
   startRefreshSketch: PropTypes.func.isRequired,
   setBlobUrl: PropTypes.func.isRequired,
