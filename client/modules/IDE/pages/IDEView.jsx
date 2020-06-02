@@ -33,7 +33,6 @@ import Searchbar from '../components/Searchbar';
 import AssetList from '../components/AssetList';
 import About from '../components/About';
 import Feedback from '../components/Feedback';
-import Language from '../components/Language';
 
 class IDEView extends React.Component {
   constructor(props) {
@@ -399,15 +398,6 @@ class IDEView extends React.Component {
           >
             <About previousPath={this.props.ide.previousPath} />
           </Overlay>
-        }
-        { this.props.location.pathname === '/language' &&
-        <Overlay
-          title="Language"
-          previousPath={this.props.ide.previousPath}
-          ariaLabel="language"
-        >
-          <Language previousPath={this.props.ide.previousPath} />
-        </Overlay>
         }
 
         { this.props.location.pathname === '/feedback' &&

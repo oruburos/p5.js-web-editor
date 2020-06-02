@@ -56,6 +56,9 @@ class Nav extends React.PureComponent {
     this.handleFocusForHelp = this.handleFocus.bind(this, 'help');
     this.toggleDropdownForAccount = this.toggleDropdown.bind(this, 'account');
     this.handleFocusForAccount = this.handleFocus.bind(this, 'account');
+    this.toggleDropdownForLang = this.toggleDropdown.bind(this, 'lang');
+    this.handleFocusForLang = this.handleFocus.bind(this, 'lang');
+
     this.closeDropDown = this.closeDropDown.bind(this);
   }
 
@@ -239,6 +242,10 @@ class Nav extends React.PureComponent {
       help: classNames({
         'nav__item': true,
         'nav__item--open': this.state.dropdownOpen === 'help'
+      }),
+      lang: classNames({
+        'nav__item': true,
+        'nav__item--open': this.state.dropdownOpen === 'lang'
       }),
       account: classNames({
         'nav__item': true,
@@ -525,6 +532,53 @@ class Nav extends React.PureComponent {
         </ul>
         { __process.env.LOGIN_ENABLED && !this.props.user.authenticated &&
           <ul className="nav__items-right" title="user-menu">
+            <li className={navDropdownState.lang}>
+              <button
+                onClick={this.toggleDropdownForLang}
+                onBlur={this.handleBlur}
+                onFocus={this.clearHideTimeout}
+                onMouseOver={() => {
+                  if (this.state.dropdownOpen !== 'none') {
+                    this.setDropdown('lang');
+                  }
+                }}
+              >
+                <span className="nav__item-header">Lang</span>
+                <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
+              </button>
+              <ul className="nav__dropdown">
+                <li className="nav__dropdown-item">
+                  <button
+                    onFocus={this.handleFocusForLang}
+                    onBlur={this.handleBlur}
+                    onClick={this.handleKeyboardShortcuts}
+                  >
+                    IT
+                  </button>
+                </li>
+                <li className="nav__dropdown-item">
+                  <a
+                    href="https://p5js.org/reference/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onFocus={this.handleFocusForLang}
+                    onBlur={this.handleBlur}
+                    onClick={this.setDropdownForNone}
+                  >EN
+                  </a>
+                </li>
+                <li className="nav__dropdown-item">
+                  <Link
+                    to="/about"
+                    onFocus={this.handleFocusForLang}
+                    onBlur={this.handleBlur}
+                    onClick={this.setDropdownForNone}
+                  >
+                    ES
+                  </Link>
+                </li>
+              </ul>
+            </li>
             <li>
               <Link to="/login">
                 <span className="nav__item-header">Log in</span>
