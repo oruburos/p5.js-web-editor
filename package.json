@@ -20,7 +20,8 @@
     "fetch-examples:prod": "cross-env NODE_ENV=production node ./dist/fetch-examples.bundle.js",
     "fetch-examples-gg:prod": "cross-env NODE_ENV=production node ./dist/fetch-examples-gg.bundle.js",
     "fetch-examples-ml5:prod": "cross-env NODE_ENV=production node ./dist/fetch-examples-ml5.bundle.js",
-    "heroku-postbuild": "touch .env; npm run build"
+    "heroku-postbuild": "touch .env; npm run build",
+    "build:i18n": "webpack --config webpack.i18n.js"
   },
   "jest": {
     "setupFiles": [
@@ -73,6 +74,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "file-loader": "^2.0.0",
+    "glob": "^7.1.6",
+    "i18n-webpack-plugin": "^1.0.0",
     "jest": "^24.9.0",
     "mini-css-extract-plugin": "^0.8.2",
     "node-sass": "^4.13.1",
@@ -130,6 +133,7 @@
     "i18next": "^19.4.5",
     "i18next-browser-languagedetector": "^4.2.0",
     "i18next-http-backend": "^1.0.15",
+    "i18next-xhr-backend": "^3.2.2",
     "is-url": "^1.2.4",
     "jest-express": "^1.11.0",
     "js-beautify": "^1.10.3",

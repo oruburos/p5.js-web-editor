@@ -1,12 +1,14 @@
 import React from 'react';
 import InlineSVG from 'react-inlinesvg';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 const squareLogoUrl = require('../../../images/p5js-square-logo.svg');
 // const playUrl = require('../../../images/play.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
 function About(props) {
+  const { t } = useTranslation('About');
   return (
     <div className="about__content">
       <Helmet>
@@ -84,15 +86,15 @@ function About(props) {
       <div className="about__footer">
         <p className="about__footer-list">
           <a
-            href="https://github.com/processing/p5.js-web-editor"
+            href="https://github.com/oruburos/p5.js-web-editor"
             target="_blank"
             rel="noopener noreferrer"
-          >Contribute
+          >   {t('Contribute')}
           </a>
         </p>
         <p className="about__footer-list">
           <a
-            href="https://github.com/processing/p5.js-web-editor/issues/new"
+            href="https://github.com/oruburos/p5.js-web-editor/issues/new"
             target="_blank"
             rel="noopener noreferrer"
           >Report a bug
