@@ -174,7 +174,7 @@ class Nav extends React.PureComponent {
     console.log('option %s', event.target.value);
     i18next.changeLanguage(event.target.value);
     this.props.showToast(1500);
-    this.props.setToastText('Congratulations, Language changed');
+    this.props.setToastText('LangChange');
     this.setDropdown('none');
   }
 
@@ -301,7 +301,7 @@ class Nav extends React.PureComponent {
                       onFocus={this.handleFocusForFile}
                       onBlur={this.handleBlur}
                     >
-                      New
+                      {t('New')}
                     </button>
                   </li>
                   {__process.env.LOGIN_ENABLED && (!this.props.project.owner || this.isUserOwner()) &&
@@ -311,7 +311,7 @@ class Nav extends React.PureComponent {
                       onFocus={this.handleFocusForFile}
                       onBlur={this.handleBlur}
                     >
-                      Save
+                      {t('Save')}
                       <span className="nav__keyboard-shortcut">{metaKeyName}+s</span>
                     </button>
                   </li>}
@@ -364,7 +364,7 @@ class Nav extends React.PureComponent {
                       onBlur={this.handleBlur}
                       onClick={this.setDropdownForNone}
                     >
-                      Examples
+                      {t('Examples')}
                     </Link>
                   </li>}
                 </ul>
@@ -560,7 +560,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onFocus={this.clearHideTimeout}
                 >
-                  <span className="nav__item-header">Lang</span>
+                  <span className="nav__item-header"> {t('Lang')}</span>
                   <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
                 </button>
                 <ul className="nav__dropdown">

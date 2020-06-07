@@ -16,15 +16,25 @@ i18n
         },
         File: {
           File: 'File',
+          New: 'New',
+          Save: 'Save',
+          Examples: 'Examples',
+          Lang: 'Lang',
+
+          LangChange: 'Congratulations, Language changed!!!'
         },
         Toast: {
-          LangChange: 'You have changed the language successfully!!'
+          LangChange: 'Congratulations, Language changed!!!'
         },
-        File2: 'THING'
       },
       es: {
         File: {
           File: 'Archivo',
+          New: 'Nuevo',
+          Save: 'Guardar',
+          Examples: 'Ejemplos',
+          Lang: 'Leng',
+          LangChange: 'Has cambiado el lenguaje exitosamente!'
         },
         About: {
           Contribute: 'Contribuye',
@@ -33,7 +43,6 @@ i18n
         Toast: {
           LangChange: 'Has cambiado el lenguaje exitosamente!'
         },
-        File2: 'COSA'
       }
     },
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
