@@ -1,8 +1,7 @@
 import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
-const fallbackLng = ['en'];
+const fallbackLng = ['es'];
 const availableLanguages = ['en', 'es'];
 
 i18n
@@ -12,13 +11,29 @@ i18n
     resources: {
       en: {
         About: {
-          Contribute: 'HELLLOS'
-        }
+          Contribute: 'Contribute',
+          Report: 'Report a bug'
+        },
+        File: {
+          File: 'File',
+        },
+        Toast: {
+          LangChange: 'You have changed the language successfully!!'
+        },
+        File2: 'THING'
       },
       es: {
+        File: {
+          File: 'Archivo',
+        },
         About: {
-          Contribute: 'HOLLI HOLLI'
-        }
+          Contribute: 'Contribuye',
+          Report: 'Reporta un error'
+        },
+        Toast: {
+          LangChange: 'Has cambiado el lenguaje exitosamente!'
+        },
+        File2: 'COSA'
       }
     },
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier

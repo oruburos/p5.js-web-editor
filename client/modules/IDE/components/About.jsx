@@ -97,7 +97,7 @@ function About(props) {
             href="https://github.com/oruburos/p5.js-web-editor/issues/new"
             target="_blank"
             rel="noopener noreferrer"
-          >Report a bug
+          >  {t('Report')}
           </a>
         </p>
         <p className="about__footer-list">

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as ActionTypes from '../../../constants';
+import i18n from '../../../i18n';
 
 const __process = (typeof global !== 'undefined' ? global : window).process;
 const ROOT_URL = __process.env.API_URL;
@@ -188,6 +189,7 @@ export function setLanguage(value) {
   // };
   console.log('setting language');
   console.log(value);
+  i18n.changeLanguage(value);
   return (dispatch, getState) => {
     dispatch({
       type: ActionTypes.SET_LANGUAGE,
