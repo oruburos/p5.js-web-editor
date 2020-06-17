@@ -1,0 +1,18 @@
+{
+  File: {
+    File: 'Archivo',
+    New: 'Nuevo',
+    Save: 'Guardar',
+    Examples: 'Ejemplos',
+    Lang: 'Leng',
+    LangChange: 'Has cambiado el lenguaje exitosamente!'
+  },
+  About: {
+    Contribute: 'Contribuye',
+    Report: 'Reporta un error'
+  },
+  Toast: {
+    LangChange: 'Has cambiado el lenguaje exitosamente!'
+  }
+}
+

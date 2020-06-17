@@ -267,7 +267,7 @@ class Nav extends React.PureComponent {
     };
 
     return (
-      <Translation ns="File">
+      <Translation ns="translations">
         {(t, { i18n }) => (
           <nav
             className="nav"
@@ -560,7 +560,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onFocus={this.clearHideTimeout}
                 >
-                  <span className="nav__item-header"> {t('Lang')}</span>
+                  <span className="nav__item-header"> {t('File.Lang')}</span>
                   <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
                 </button>
                 <ul className="nav__dropdown">

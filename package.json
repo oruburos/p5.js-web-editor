@@ -133,6 +133,7 @@
     "i18next": "^19.4.5",
     "i18next-browser-languagedetector": "^4.2.0",
     "i18next-http-backend": "^1.0.15",
+    "i18next-resource-store-loader": "^0.1.2",
     "i18next-xhr-backend": "^3.2.2",
     "is-url": "^1.2.4",
     "jest-express": "^1.11.0",
