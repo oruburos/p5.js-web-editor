@@ -1,10 +1,18 @@
-{About: {Contribute: 'Contribute',Report: 'Report a bug'},File: {File: 'File',New: 'New',
-    Save: 'Save',
-    Examples: 'Examples',
-    Lang: 'Lang',
-    LangChange: 'Congratulations, Language changed!!!'
-  },
-  Toast: {
-    LangChange: 'Congratulations, Language changed!!!'
-  }
+{
+	"About": {
+		"Contribute": "Contribute",
+		"Report": "Report a bug"
+	},
+	"File": {
+		"File": "File",
+		"File2": "Fiasdasle",
+		"Save": "Save",
+		"Examples":"Examples",
+		"Lang":"Lang",
+		"LangChange": "Congratulations, Language changed!!!"
+	},
+	"Toast": {
+		"LangChange": "Congratulations, Language changed!!!"
+	}
 }
+

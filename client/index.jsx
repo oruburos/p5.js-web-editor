@@ -27,7 +27,7 @@ const App = () => (
 const HotApp = hot(App);
 
 render(
-  <Suspense fallback={(<div>Loading TRANSLATION</div>)}>
+  <Suspense fallback={(<div>Loading locale pack</div>)}>
     <HotApp />
   </Suspense>,
   document.getElementById('root')

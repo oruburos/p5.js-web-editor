@@ -19,7 +19,7 @@ module.exports = {
       './client/index.jsx',
     ],
     previewScripts: [
-       path.resolve(__dirname, '../client/utils/previewEntry.js')
+      path.resolve(__dirname, '../client/utils/previewEntry.js')
     ]
   },
   output: {
@@ -80,7 +80,7 @@ module.exports = {
             name: '[name].[ext]',
             outputPath: 'images/'
           }
-         }
+        }
       },
       {
         test: /fonts\/.*\.(eot|svg|ttf|woff|woff2)$/,
@@ -91,10 +91,27 @@ module.exports = {
         use: {
           loader: 'sass-extract-loader',
           options: {
-            plugins: [{ plugin: 'sass-extract-js', options: { camelCase: false } }]
+            plugins: [{
+              plugin: 'sass-extract-js',
+              options: { camelCase: false }
+            }]
           }
         }
+      },
+      {
+        test: /locales\.(json)$/,
+        type: "javascript/auto",
+        use: {
+          loader: 'raw-loader',
+          options: {
+            esModule: false,
+          },
+         }
       }
-    ],
+
+
+
+      ]
   },
-};
+}
+;

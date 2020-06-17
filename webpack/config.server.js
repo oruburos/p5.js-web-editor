@@ -39,6 +39,7 @@ module.exports = {
         }
       }, {
         test: /\.json$/,
+        exclude: /locales/,
         loader: 'json-loader',
       },
     ],

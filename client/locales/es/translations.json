@@ -1,18 +1,17 @@
 {
-  File: {
-    File: 'Archivo',
-    New: 'Nuevo',
-    Save: 'Guardar',
-    Examples: 'Ejemplos',
-    Lang: 'Leng',
-    LangChange: 'Has cambiado el lenguaje exitosamente!'
+  "About": {
+    "Contribute": "Coasdasdntribute",
+    "Report": "Reporasdasdt a bug"
   },
-  About: {
-    Contribute: 'Contribuye',
-    Report: 'Reporta un error'
+  "File": {
+    "File": "Archivo",
+    "File2": "Fiasdasle",
+    "Save": "Guardar",
+	"Examples":"Ejemplos",
+	  "Lang":"Leng",
+    "LangChange": "Congratasasdulations, Language changed!!!"
   },
-  Toast: {
-    LangChange: 'Has cambiado el lenguaje exitosamente!'
+  "Toast": {
+    "LangChange": "Felicidades, lenguaje modificado!!!"
   }
 }
-

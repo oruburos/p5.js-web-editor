@@ -267,7 +267,7 @@ class Nav extends React.PureComponent {
     };
 
     return (
-      <Translation ns="translations">
+      <Translation ns="common">
         {(t, { i18n }) => (
           <nav
             className="nav"
@@ -291,7 +291,7 @@ class Nav extends React.PureComponent {
                     }
                   }}
                 >
-                  <span className="nav__item-header"> {t('File')}</span>
+                  <span className="nav__item-header"> {t('common:File.File')}</span>
                   <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
                 </button>
                 <ul className="nav__dropdown">
@@ -301,7 +301,7 @@ class Nav extends React.PureComponent {
                       onFocus={this.handleFocusForFile}
                       onBlur={this.handleBlur}
                     >
-                      {t('New')}
+                      {t('common:File.File')}
                     </button>
                   </li>
                   {__process.env.LOGIN_ENABLED && (!this.props.project.owner || this.isUserOwner()) &&
@@ -311,7 +311,7 @@ class Nav extends React.PureComponent {
                       onFocus={this.handleFocusForFile}
                       onBlur={this.handleBlur}
                     >
-                      {t('Save')}
+                      {t('common:File.Save')}
                       <span className="nav__keyboard-shortcut">{metaKeyName}+s</span>
                     </button>
                   </li>}
@@ -364,7 +364,7 @@ class Nav extends React.PureComponent {
                       onBlur={this.handleBlur}
                       onClick={this.setDropdownForNone}
                     >
-                      {t('Examples')}
+                      {t('common:File.Examples')}
                     </Link>
                   </li>}
                 </ul>
@@ -560,7 +560,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onFocus={this.clearHideTimeout}
                 >
-                  <span className="nav__item-header"> {t('File.Lang')}</span>
+                  <span className="nav__item-header"> {t('common:File.Lang')}</span>
                   <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
                 </button>
                 <ul className="nav__dropdown">
