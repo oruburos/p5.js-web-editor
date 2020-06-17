@@ -9,7 +9,7 @@ import * as ToastActions from '../actions/toast';
 const exitUrl = require('../../../images/exit.svg');
 
 function Toast(props) {
-  const { t } = useTranslation('Toast');
+  const { t } = useTranslation('common');
   return (
     <section className="toast">
       <p>

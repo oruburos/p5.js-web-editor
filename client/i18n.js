@@ -26,7 +26,8 @@ i18n
     whitelist: availableLanguages,
     interpolation: {
       escapeValue: false
-    }
+    },
+    saveMissing: true,
   });
 
 export default i18n;
