@@ -8,7 +8,7 @@ const squareLogoUrl = require('../../../images/p5js-square-logo.svg');
 const asteriskUrl = require('../../../images/p5-asterisk.svg');
 
 function About(props) {
-  const { t } = useTranslation('About');
+  const { t } = useTranslation('common');
   return (
     <div className="about__content">
       <Helmet>
@@ -89,7 +89,7 @@ function About(props) {
             href="https://github.com/oruburos/p5.js-web-editor"
             target="_blank"
             rel="noopener noreferrer"
-          >   {t('Contribute')}
+          >   {t('About.Contribute')}
           </a>
         </p>
         <p className="about__footer-list">
@@ -97,7 +97,7 @@ function About(props) {
             href="https://github.com/oruburos/p5.js-web-editor/issues/new"
             target="_blank"
             rel="noopener noreferrer"
-          >  {t('Report')}
+          >  {t('About.Report')}
           </a>
         </p>
         <p className="about__footer-list">
