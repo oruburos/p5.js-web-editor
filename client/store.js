@@ -15,7 +15,6 @@ export default function configureStore(initialState) {
     // Enable DevTools only when rendering on client and during development.
     enhancers.push(window.devToolsExtension ? window.devToolsExtension() : DevTools.instrument());
   }
-
   const savedState = loadState();
   clearState();
 

@@ -101,4 +101,10 @@ router.get('/:username/sketches', (req, res) => {
   ));
 });
 
+
+router.get('/locales', (req, res) => {
+  console.log('LCOLALSLALLDALALDL')
+  res.send('/locales');
+});
+
 export default router;
