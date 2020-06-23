@@ -380,7 +380,7 @@ class Nav extends React.PureComponent {
                     }
                   }}
                 >
-                  <span className="nav__item-header">Edit</span>
+                  <span className="nav__item-header"> {t('common:File.Edit')}</span>
                   <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
                 </button>
                 <ul className="nav__dropdown">
@@ -393,7 +393,7 @@ class Nav extends React.PureComponent {
                       onFocus={this.handleFocusForEdit}
                       onBlur={this.handleBlur}
                     >
-                      Tidy Code
+                      {t('common:File.TidyCode')}
                       <span className="nav__keyboard-shortcut">{'\u21E7'}+Tab</span>
                     </button>
                   </li>

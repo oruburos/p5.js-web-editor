@@ -10,7 +10,7 @@ import axios from 'axios';
 
 const fallbackLng = ['en'];
 const availableLanguages = ['en', 'es'];
-const fileTmp = '/locales/en/translations.json';
+/* const fileTmp = '/locales/en/translations.json';
 
 console.log('Direccion para enviar');
 console.log(fileTmp);
@@ -26,7 +26,7 @@ axios.get(fileTmp)
   // handle error
     console.log('ERROR AXIOS ASA AXIOS');
     console.log(error);
-  });
+  }); */
 
 
 const options = {
