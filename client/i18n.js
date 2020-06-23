@@ -30,7 +30,8 @@ axios.get(fileTmp)
 
 
 const options = {
-  loadPath: 'https://raw.githubusercontent.com/oruburos/p5.js-web-editor/react18next/client/locales/{{lng}}/translations.json',
+  loadPath: '/locales/{{lng}}/translations.json',
+  // loadPath: fileTmp,
   requestOptions: { // used for fetch, can also be a function (payload) => ({ method: 'GET' })
     mode: 'no-cors',
     cache: 'default'
