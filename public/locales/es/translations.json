@@ -1,15 +1,20 @@
 {
   "About": {
     "Contribute": "Contribuir",
-    "Report": "Reportar un error"
+    "Report": "Reportar un error",
+    "About": "Acerca de"
   },
   "File": {
     "File": "Archivo",
-    "File2": "Fiasdasle",
+    "New": "Nuevo",
     "Save": "Guardar",
-	"Examples":"Ejemplos",
-	  "Lang":"Leng",
-    "LangChange": "Congratasasdulations, Language changed!!!"
+    "Examples":"Ejemplos",
+    "Edit":"Editar",
+    "Lang":"Leng",
+    "TidyCode":"Ordenar código",
+    "LangChange": "Lenguaje cambiado",
+    "Sketch": "Bosquejo",
+    "Help": "Ayuda"
   },
   "Toast": {
     "LangChange": "Felicidades, lenguaje modificado!!!"

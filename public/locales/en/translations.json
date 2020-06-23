@@ -1,11 +1,20 @@
 {
 	"About": {
 		"Contribute": "Contribute",
-		"Report": "Report a bug"
+		"Report": "Report a bug",
+		"About": "About"
 	},
 	"File": {
 		"File": "File",
-		"File2": "Fiasdasle",
+		"New": "New",
+		"Save": "Guardar",
+		"Examples":"Ejemplos",
+		"Edit":"Editar",
+		"Lang":"Lang",
+		"TidyCode":"Tidy Code",
+		"LangChange": "Language changed",
+		"Sketch": "Sketch",
+		"Help": "Help",
 		"Save": "Save",
 		"Examples":"Examples",
 		"Lang":"Lang",
