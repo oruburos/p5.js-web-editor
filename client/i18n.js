@@ -8,7 +8,7 @@ import Backend from 'i18next-http-backend';
 // import commonEn from './locales/en/translations.json';
 // import commonEs from './locales/es/translations.json';
 
-const fallbackLng = ['en'];
+const fallbackLng = ['es'];
 const availableLanguages = ['en', 'es'];
 /* const fileTmp = '/locales/en/translations.json';
 
@@ -30,6 +30,7 @@ axios.get(fileTmp)
 
 
 const options = {
+  // loadPath: '/locales/{{lng}}/translations.json',
   loadPath: '/locales/{{lng}}/translations.json',
   // loadPath: fileTmp,
   requestOptions: { // used for fetch, can also be a function (payload) => ({ method: 'GET' })
@@ -41,7 +42,7 @@ const options = {
 i18n
   .use(initReactI18next) // pass the i18n instance to react-i18next.
   .use(Backend).init({
-    lng: 'en',
+    lng: 'es',
     defaultNS: 'common',
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
     debug: true,

@@ -14,7 +14,12 @@
     "TidyCode":"Ordenar código",
     "LangChange": "Lenguaje cambiado",
     "Sketch": "Bosquejo",
-    "Help": "Ayuda"
+    "Help": "Ayuda",
+    "Find": "Buscar",
+    "FindPrevious": "Buscar anterior",
+    "Stop": "Detener",
+    "Welcome": "Bienvenida",
+    "Login":"Ingresa o registráte"
   },
   "Toast": {
     "LangChange": "Felicidades, lenguaje modificado!!!"

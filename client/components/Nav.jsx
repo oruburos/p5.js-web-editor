@@ -174,7 +174,7 @@ class Nav extends React.PureComponent {
     console.log('option %s', event.target.value);
     i18next.changeLanguage(event.target.value);
     this.props.showToast(1500);
-    this.props.setToastText('LangChange');
+    this.props.setToastText('Toast.LangChange');
     this.setDropdown('none');
   }
 
@@ -403,7 +403,7 @@ class Nav extends React.PureComponent {
                       onFocus={this.handleFocusForEdit}
                       onBlur={this.handleBlur}
                     >
-                      Find
+                      {t('common:File.Find')}
                       <span className="nav__keyboard-shortcut">{metaKeyName}+F</span>
                     </button>
                   </li>
@@ -423,7 +423,7 @@ class Nav extends React.PureComponent {
                       onFocus={this.handleFocusForEdit}
                       onBlur={this.handleBlur}
                     >
-                      Find Previous
+                      {t('common:File.FindPrevious')}
                       <span className="nav__keyboard-shortcut">{'\u21E7'}+{metaKeyName}+G</span>
                     </button>
                   </li>
@@ -440,7 +440,7 @@ class Nav extends React.PureComponent {
                     }
                   }}
                 >
-                  <span className="nav__item-header">Sketch</span>
+                  <span className="nav__item-header">{t('common:File.Sketch')}</span>
                   <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
                 </button>
                 <ul className="nav__dropdown">
@@ -515,7 +515,7 @@ class Nav extends React.PureComponent {
                     }
                   }}
                 >
-                  <span className="nav__item-header">Help</span>
+                  <span className="nav__item-header">{t('common:File.Help')}</span>
                   <InlineSVG className="nav__item-header-triangle" src={triangleUrl} />
                 </button>
                 <ul className="nav__dropdown">
@@ -597,13 +597,13 @@ class Nav extends React.PureComponent {
               </li>
               <li>
                 <Link to="/login">
-                  <span className="nav__item-header">Log in</span>
+                  <span className="nav__item-header">{t('common:File.Login')}</span>
                 </Link>
               </li>
-              <span className="nav__item-spacer">or</span>
+              <span className="nav__item-spacer">{t('common:File.LoginOr')}</span>
               <li>
                 <Link to="/signup">
-                  <span className="nav__item-header">Sign up</span>
+                  <span className="nav__item-header">{t('common:File.SignUp')}</span>
                 </Link>
               </li>
             </ul>}

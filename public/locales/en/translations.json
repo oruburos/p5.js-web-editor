@@ -15,10 +15,11 @@
 		"LangChange": "Language changed",
 		"Sketch": "Sketch",
 		"Help": "Help",
-		"Save": "Save",
-		"Examples":"Examples",
-		"Lang":"Lang",
-		"LangChange": "Congratulations, Language changed!!!"
+		"Find": "Find",
+		"FindPrevious": "Find Previous",
+		"Stop": "Stop",
+		"Welcome": "Welcome",
+		"Login":"Log in or Sign up"
 	},
 	"Toast": {
 		"LangChange": "Congratulations, Language changed!!!"
