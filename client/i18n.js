@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 // import Fetch from 'i18next-fetch-backend';
 // import Fetch from 'i18next-fetch-backend';
 import Backend from 'i18next-http-backend';
-import axios from 'axios';
+// import axios from 'axios';
 // import commonEn from './locales/en/translations.json';
 // import commonEs from './locales/es/translations.json';
 
@@ -33,8 +33,7 @@ const options = {
   loadPath: '/locales/{{lng}}/translations.json',
   // loadPath: fileTmp,
   requestOptions: { // used for fetch, can also be a function (payload) => ({ method: 'GET' })
-    mode: 'no-cors',
-    cache: 'default'
+    mode: 'no-cors'
   },
   allowMultiLoading: false, // set loadPath: '/locales/resources.json?lng={{lng}}&ns={{ns}}' to adapt to multiLoading
 };

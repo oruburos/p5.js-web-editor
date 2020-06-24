@@ -77,9 +77,9 @@ app.use(Express.static(path.resolve(__dirname, '../dist/static'), {
 
 // setting middleware
 app.use(Express.static('public'));
-app.get('/public', (req, res) => {
+/* app.get('/public', (req, res) => {
   res.send('An alligator approaches!');
-});
+}); */
 
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(bodyParser.json({ limit: '50mb' }));
