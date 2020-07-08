@@ -216,7 +216,7 @@ class IDEView extends React.Component {
           warnIfUnsavedChanges={this.warnIfUnsavedChanges}
           cmController={this.cmController}
         />
-        <Toolbar />
+        <Toolbar key={this.props.project.id} />
         {this.props.ide.preferencesIsVisible &&
           <Overlay
             title={this.props.t('Settings')}
@@ -485,6 +485,7 @@ IDEView.propTypes = {
   ide: PropTypes.shape({
     isPlaying: PropTypes.bool.isRequired,
     isAccessibleOutputPlaying: PropTypes.bool.isRequired,
+    // eslint-disable-next-line react/forbid-prop-types
     consoleEvent: PropTypes.array,
     modalIsVisible: PropTypes.bool.isRequired,
     sidebarIsExpanded: PropTypes.bool.isRequired,
@@ -520,6 +521,7 @@ IDEView.propTypes = {
     updatedAt: PropTypes.string
   }).isRequired,
   editorAccessibility: PropTypes.shape({
+    // eslint-disable-next-line react/forbid-prop-types
     lintMessages: PropTypes.array.isRequired,
   }).isRequired,
   updateLintMessage: PropTypes.func.isRequired,
