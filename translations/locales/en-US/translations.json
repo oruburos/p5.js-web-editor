@@ -1,32 +1,29 @@
 {
-   "ToolBar": {
-     "File": {
-       "New": "New",
-       "Save": "Save",
-       "Open": "Open",
-       "Examples": "Examples",
-       "File": "File"
-     },
-     "Edit": { "Edit": "Edit",
-       "TidyCode": "Tidy Code",
-       "Find": "Find",
-       "AddToCollection": "Add to Collection",
-       "FindNext": "Find Next",
-       "FindPrevious": "Find Previous"
-     },
-     "Sketch": {
-       "Sketch": "Sketch",
-       "AddFile": "Add File",
-       "AddFolder": "Add Folder",
-       "Run": "Run",
-       "Stop": "Stop"
-     },
-     "Help": {"Help": "Help",
-       "KeyboardShortcuts": "Keyboard Shortcuts",
-       "Reference": "Reference"
-     }
+  "ToolBar": {
+    "File": "File",
+    "New": "New",
+    "Save": "Save",
+    "Open": "Open",
+    "Examples": "Examples",
 
-   },
+    "Edit": "Edit",
+    "TidyCode": "Tidy Code",
+    "Find": "Find",
+    "AddToCollection": "Add to Collection",
+    "FindNext": "Find Next",
+    "FindPrevious": "Find Previous",
+
+    "Sketch": "Sketch",
+    "AddFile": "Add File",
+    "AddFolder": "Add Folder",
+    "Run": "Run",
+    "Stop": "Stop",
+
+    "Help": "Help",
+    "KeyboardShortcuts": "Keyboard Shortcuts",
+    "Reference": "Reference"
+
+  },
   "Preferences": {
     "TurnOnAccessibleOutput": "Turn On Accessible Output",
     "TurnOffAccessibleOutput": "Turn Off Accessible Output",
@@ -62,7 +59,8 @@
     "WordWrap": "Word Wrap",
     "LineNumbers": "Line numbers"
   },
-  "About": {   "Contribute": "Contribute",
+  "About": {
+    "Contribute": "Contribute",
     "NewP5": "New to p5.js?",
     "Report": "Report a bug",
     "Learn": "Learn",
@@ -100,21 +98,17 @@
     "Hello": "Hello",
     "MyAccount": "My Account",
     "My":"My",
-    "Sketches": "My sketches",
-    "Collections": "My collections",
+    "MySketches": "My Sketches",
+    "MyCollections":"My collections",
     "Asset": "Asset",
     "MyAssets": "My assets"
   },
   "Common": {
-
     "Share": "Share",
     "Duplicate": "Duplicate",
-
     "LangChange": "Language changed",
     "Welcome": "Welcome",
-
     "OpenedNewSketch": "Opened new sketch.",
-
     "TitleAbout": "p5.js Web Editor | About",
     "CodeEditing": "Code Editing",
     "Error": "Error",
