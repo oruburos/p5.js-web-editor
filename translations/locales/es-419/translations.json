@@ -83,7 +83,8 @@
     "Login" :{
         "Login": "Ingresa",
         "LoginOr": "o",
-        "SignUp": "registráte",
+        "SignUp": "Registráte",
+        "LogOut": "Cerrar sesión",
         "Email": "correo electrónico",
         "Username": "nombre de usuario",
         "LoginGithub": "Ingresa con Github",

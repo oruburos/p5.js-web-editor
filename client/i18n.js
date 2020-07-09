@@ -7,7 +7,7 @@ const fallbackLng = ['en-US'];
 const availableLanguages = ['en-US', 'es-419'];
 
 const options = {
-  loadPath: '/translations/{{lng}}/translations.json',
+  loadPath: 'locales/{{lng}}/translations.json',
   requestOptions: { // used for fetch, can also be a function (payload) => ({ method: 'GET' })
     mode: 'no-cors'
   },
@@ -20,7 +20,7 @@ i18n
   .use(Backend) // to fetch the data from server
   .init({
     lng: 'en-US',
-    defaultNS: 'WebEditor',
+    defaultNS: 'ToolBar',
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
     debug: true,
     backend: options,
