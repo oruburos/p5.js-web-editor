@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
+import { withTranslation } from 'react-i18next';
 import { Console as ConsoleFeed } from 'console-feed';
 import {
   CONSOLE_FEED_WITHOUT_ICONS, CONSOLE_FEED_LIGHT_STYLES,
@@ -88,10 +89,10 @@ class Console extends React.Component {
     return (
       <section className={consoleClass} >
         <header className="preview-console__header">
-          <h2 className="preview-console__header-title">Console</h2>
+          <h2 className="preview-console__header-title">{this.props.t('Console.Console')}</h2>
           <div className="preview-console__header-buttons">
             <button className="preview-console__clear" onClick={this.props.clearConsole} aria-label="Clear console">
-              Clear
+              {this.props.t('Console.Clear')}
             </button>
             <button
               className="preview-console__collapse"
@@ -143,11 +144,12 @@ Console.propTypes = {
   clearConsole: PropTypes.func.isRequired,
   dispatchConsoleEvent: PropTypes.func.isRequired,
   theme: PropTypes.string.isRequired,
-  fontSize: PropTypes.number.isRequired
+  fontSize: PropTypes.number.isRequired,
+  t: PropTypes.func.isRequired
 };
 
 Console.defaultProps = {
   consoleEvents: []
 };
 
-export default Console;
+export default withTranslation('translations')(Console);

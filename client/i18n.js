@@ -7,7 +7,7 @@ const fallbackLng = ['en-US'];
 const availableLanguages = ['en-US', 'es-419'];
 
 const options = {
-  loadPath: 'locales/{{lng}}/translations.json',
+  loadPath: 'locales/{{lng}}/translations.json?ns={{ns}}',
   requestOptions: { // used for fetch, can also be a function (payload) => ({ method: 'GET' })
     mode: 'no-cors'
   },
@@ -16,13 +16,16 @@ const options = {
 
 i18n
   .use(initReactI18next) // pass the i18n instance to react-i18next.
-  .use(LanguageDetector)// to detect the language from currentBrowser
+  // .use(LanguageDetector)// to detect the language from currentBrowser
   .use(Backend) // to fetch the data from server
   .init({
     lng: 'en-US',
-    defaultNS: 'WebEditor',
+    // defaultNS: 'translations',
+    keySeparator: ':',
+    ns: 'translations',
+    // defaultNS: '2',
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
-    debug: false,
+    debug: true,
     backend: options,
     getAsync: false,
     initImmediate: false,
