@@ -364,4 +364,4 @@ Preferences.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withTranslation('translations')(Preferences);
+export default withTranslation()(Preferences);

@@ -152,4 +152,4 @@ Console.defaultProps = {
   consoleEvents: []
 };
 
-export default withTranslation('translations')(Console);
+export default withTranslation()(Console);

@@ -21,9 +21,7 @@ i18n
   .init({
     lng: 'en-US',
     // defaultNS: 'translations',
-    keySeparator: ':',
-    ns: 'translations',
-    // defaultNS: '2',
+    // keySeparator: ':',
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
     debug: true,
     backend: options,

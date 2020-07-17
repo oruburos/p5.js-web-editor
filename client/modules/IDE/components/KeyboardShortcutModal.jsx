@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { metaKeyName, } from '../../../utils/metaKey';
 
 function KeyboardShortcutModal() {
-  const { t } = useTranslation('translations');
+  const { t } = useTranslation();
   return (
     <div className="keyboard-shortcuts">
       <h3 className="keyboard-shortcuts__title">{t('KeyboardShortcuts.CodeEditing')}</h3>

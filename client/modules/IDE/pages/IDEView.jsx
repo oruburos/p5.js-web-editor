@@ -650,5 +650,5 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-export default withTranslation('translations')(withRouter(connect(mapStateToProps, mapDispatchToProps)(IDEView)));
+export default withTranslation()(withRouter(connect(mapStateToProps, mapDispatchToProps)(IDEView)));
 

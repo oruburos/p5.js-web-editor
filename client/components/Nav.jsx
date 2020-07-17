@@ -100,11 +100,11 @@ class Nav extends React.PureComponent {
     const { unsavedChanges, warnIfUnsavedChanges } = this.props;
     if (!unsavedChanges) {
       this.props.showToast(1500);
-      this.props.setToastText('Opened new sketch.');
+      this.props.setToastText('Toast.OpenedNewSketch');
       this.props.newProject();
     } else if (warnIfUnsavedChanges && warnIfUnsavedChanges()) {
       this.props.showToast(1500);
-      this.props.setToastText('Opened new sketch.');
+      this.props.setToastText('Toast.OpenedNewSketch');
       this.props.newProject();
     }
     this.setDropdown('none');
@@ -842,5 +842,5 @@ const mapDispatchToProps = {
   setAllAccessibleOutput
 };
 
-export default withTranslation('translations')(withRouter(connect(mapStateToProps, mapDispatchToProps)(Nav)));
+export default withTranslation()(withRouter(connect(mapStateToProps, mapDispatchToProps)(Nav)));
 export { Nav as NavComponent };

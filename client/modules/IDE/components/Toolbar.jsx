@@ -227,4 +227,4 @@ const mapDispatchToProps = {
 
 export const ToolbarComponent = Toolbar;
 // export default connect(mapStateToProps, mapDispatchToProps)(Toolbar);
-export default withTranslation('translations')(withRouter(connect(mapStateToProps, mapDispatchToProps)(Toolbar)));
+export default withTranslation()(withRouter(connect(mapStateToProps, mapDispatchToProps)(Toolbar)));

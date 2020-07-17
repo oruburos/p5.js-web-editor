@@ -14,7 +14,9 @@
     "Menu.File.Share": "Share",
     "Menu.File.Duplicate": "Duplicate",
     "Menu.File.Open": "Open",
+    "Menu.File.Download": "Download",
     "Menu.File.AddToCollection": "Add to Collection",
+    "Menu.File.Examples": "Examples",
     "Menu.Edit": "Edit",
     "Menu.Edit.TidyCode": "Tidy Code",
     "Menu.Edit.Find": "Find",
@@ -91,7 +93,6 @@
     "UsernameSplit": "User Name",
     "Password": "Password",
     "ConfirmPassword": "Confirm Password",
-    "OpenedNewSketch": "Opened new sketch.",
     "Account.Hello": "Hello",
     "Account.MyAccount": "My Account",
     "Account.My":"My",
@@ -113,5 +114,8 @@
     "Sublime Text shortcuts": "Sublime Text shortcuts",
     "WarningUnsavedChanges": "Are you sure you want to leave this page? You have unsaved changes.",
     "Console.Clear": "Clear",
-    "Console.Console": "Console"
+    "Console.Console": "Console",
+    "Toast.OpenedNewSketch": "Opened new sketch.",
+    "Toast.SketchSaved": "Sketch saved.",
+    "Toast.AutosaveEnabled": "Autosave enabled."
 }
