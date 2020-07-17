@@ -75,7 +75,6 @@ app.use(corsMiddleware);
 app.options('*', corsMiddleware);
 
 // Body parser, cookie parser, sessions, serve public assets
-// app.use('/locales', Express.static(path.resolve(__dirname, '../dist/static/locales'), { cacheControl: false }));
 app.use(
   '/locales',
   Express.static(
