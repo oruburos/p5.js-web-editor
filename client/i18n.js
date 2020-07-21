@@ -7,7 +7,7 @@ const fallbackLng = ['en-US'];
 const availableLanguages = ['en-US', 'es-419'];
 
 const options = {
-  loadPath: 'locales/{{lng}}/translations.json?ns={{ns}}',
+  loadPath: '/locales/{{lng}}/translations.json',
   requestOptions: { // used for fetch, can also be a function (payload) => ({ method: 'GET' })
     mode: 'no-cors'
   },
@@ -23,7 +23,7 @@ i18n
     // defaultNS: 'translations',
     // keySeparator: ':',
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
-    debug: true,
+    debug: false,
     backend: options,
     getAsync: false,
     initImmediate: false,

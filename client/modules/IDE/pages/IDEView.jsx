@@ -10,7 +10,7 @@ import Editor from '../components/Editor';
 import Sidebar from '../components/Sidebar';
 import PreviewFrame from '../components/PreviewFrame';
 import Toolbar from '../components/Toolbar';
-import Preferences from '../components/Preferences';
+import Preferences from '../components/Preferences/index';
 import NewFileModal from '../components/NewFileModal';
 import NewFolderModal from '../components/NewFolderModal';
 import UploadFileModal from '../components/UploadFileModal';
@@ -221,7 +221,7 @@ class IDEView extends React.Component {
         <Toolbar key={this.props.project.id} />
         {this.props.ide.preferencesIsVisible &&
           <Overlay
-            title={this.props.t('Menu.Settings')}
+            title={this.props.t('Settings')}
             ariaLabel="settings"
             closeOverlay={this.props.closePreferences}
           >
@@ -324,20 +324,11 @@ class IDEView extends React.Component {
                   runtimeErrorWarningVisible={this.props.ide.runtimeErrorWarningVisible}
                   provideController={(ctl) => { this.cmController = ctl; }}
                 />
-                <Console
-                  fontSize={this.props.preferences.fontSize}
-                  consoleEvents={this.props.console}
-                  isExpanded={this.props.ide.consoleIsExpanded}
-                  expandConsole={this.props.expandConsole}
-                  collapseConsole={this.props.collapseConsole}
-                  clearConsole={this.props.clearConsole}
-                  dispatchConsoleEvent={this.props.dispatchConsoleEvent}
-                  theme={this.props.preferences.theme}
-                />
+                <Console />
               </SplitPane>
               <section className="preview-frame-holder">
                 <header className="preview-frame__header">
-                  <h2 className="preview-frame__title">{this.props.t('Toolbar.Preview')}</h2>
+                  <h2 className="preview-frame__title">{this.props.t('Preview')}</h2>
                 </header>
                 <div className="preview-frame__content">
                   <div className="preview-frame-overlay" ref={(element) => { this.overlay = element; }}>
@@ -651,4 +642,3 @@ function mapDispatchToProps(dispatch) {
 
 
 export default withTranslation()(withRouter(connect(mapStateToProps, mapDispatchToProps)(IDEView)));
-
