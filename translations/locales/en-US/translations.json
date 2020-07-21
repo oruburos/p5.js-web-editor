@@ -65,7 +65,8 @@
       "MySketches": "My Sketches",
       "MyCollections": "My Collections",
       "Asset": "Asset",
-      "MyAssets": "My Assets"
+      "MyAssets": "My Assets",
+      "LogOut": "Log Out"
     }
   },
   "Toast": {
@@ -83,7 +84,7 @@
     "Console": "Console"
   },
   "Preferences": {
-    "Title": "Settings",
+    "Settings": "Settings",
     "Option": {
       "GeneralSettings": "General settings",
       "Accessibility": "Accessibility",
@@ -130,14 +131,12 @@
       "TurnOffAccessibleOutput": "Turn Off Accessible Output"
     }
   },
-
   "Sidebar": {
     "Create": "Create",
     "EnterName": "enter a name",
     "Add": "Add",
     "Folder": "Folder"
   },
-
   "Common": {
     "BackEditor": "Back to Editor",
     "ToogleSidebar": "Toogle Sidebar",

@@ -608,13 +608,13 @@ class Nav extends React.PureComponent {
       <ul className="nav__items-right" title="user-menu">
         <li className="nav__item">
           <Link to="/login" className="nav__auth-button">
-            <span className="nav__item-header">{this.props.t('Login.Login')}</span>
+            <span className="nav__item-header">{this.props.t('Nav.Login.Login')}</span>
           </Link>
         </li>
-        <span className="nav__item-or">{this.props.t('Login.LoginOr')}</span>
+        <span className="nav__item-or">{this.props.t('Nav.Login.LoginOr')}</span>
         <li className="nav__item">
           <Link to="/signup" className="nav__auth-button">
-            <span className="nav__item-header">{this.props.t('Login.SignUp')}</span>
+            <span className="nav__item-header">{this.props.t('Nav.Login.SignUp')}</span>
           </Link>
         </li>
       </ul>
@@ -625,7 +625,7 @@ class Nav extends React.PureComponent {
     return (
       <ul className="nav__items-right" title="user-menu">
         <li className="nav__item">
-          <span>{this.props.t('Account.Hello')}, {this.props.user.username}!</span>
+          <span>{this.props.t('Nav.Auth.Hello')}, {this.props.user.username}!</span>
         </li>
         <span className="nav__item-spacer">|</span>
         <li className={navDropdownState.account}>
@@ -640,7 +640,7 @@ class Nav extends React.PureComponent {
               }
             }}
           >
-            {this.props.t('Account.MyAccount')}
+            {this.props.t('Nav.Auth.MyAccount')}
             <TriangleIcon className="nav__item-header-triangle" focusable="false" aria-hidden="true" />
           </button>
           <ul className="nav__dropdown">
@@ -651,7 +651,7 @@ class Nav extends React.PureComponent {
                 onBlur={this.handleBlur}
                 onClick={this.setDropdownForNone}
               >
-                {this.props.t('Account.MySketches')}
+                {this.props.t('Nav.Auth.MySketches')}
               </Link>
             </li>
             {getConfig('UI_COLLECTIONS_ENABLED') &&
@@ -662,7 +662,7 @@ class Nav extends React.PureComponent {
                   onBlur={this.handleBlur}
                   onClick={this.setDropdownForNone}
                 >
-                  {this.props.t('Account.MyCollections')}
+                  {this.props.t('Nav.Auth.MyCollections')}
                 </Link>
               </li>
             }
@@ -673,7 +673,7 @@ class Nav extends React.PureComponent {
                 onBlur={this.handleBlur}
                 onClick={this.setDropdownForNone}
               >
-                {this.props.t('Account.MyAssets')}
+                {this.props.t('Nav.Auth.MyAssets')}
               </Link>
             </li>
             <li className="nav__dropdown-item">
@@ -683,7 +683,7 @@ class Nav extends React.PureComponent {
                 onBlur={this.handleBlur}
                 onClick={this.setDropdownForNone}
               >
-                {this.props.t('Menu.Settings')}
+                {this.props.t('Preferences.Settings')}
               </Link>
             </li>
             <li className="nav__dropdown-item">
@@ -692,7 +692,7 @@ class Nav extends React.PureComponent {
                 onFocus={this.handleFocusForAccount}
                 onBlur={this.handleBlur}
               >
-                {this.props.t('Login.LogOut')}
+                {this.props.t('Nav.Auth.LogOut')}
               </button>
             </li>
           </ul>

@@ -23,7 +23,7 @@ i18n
     // defaultNS: 'translations',
     // keySeparator: ':',
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
-    debug: false,
+    debug: true,
     backend: options,
     getAsync: false,
     initImmediate: false,
