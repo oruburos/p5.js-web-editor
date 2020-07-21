@@ -20,10 +20,8 @@ i18n
   .use(Backend) // to fetch the data from server
   .init({
     lng: 'en-US',
-    // defaultNS: 'translations',
-    // keySeparator: ':',
     fallbackLng, // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
-    debug: true,
+    debug: false,
     backend: options,
     getAsync: false,
     initImmediate: false,
