@@ -130,6 +130,7 @@ class Toolbar extends React.Component {
             }}
             disabled={!canEditProjectName}
             aria-label={this.props.t('Toolbar.EditSketchARIA')}
+            data-testid="edit-sketch"
           >
             <span>{this.props.project.name}</span>
             {
@@ -142,6 +143,7 @@ class Toolbar extends React.Component {
             }
           </button>
           <input
+            data-testid="new-sketch"
             type="text"
             maxLength="128"
             className="toolbar__project-name-input"

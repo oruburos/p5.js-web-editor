@@ -1,8 +1,9 @@
 import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import lodash from 'lodash';
+
+
 import { ToolbarComponent } from './Toolbar';
-import { i18ntest } from '../../../i18n-test';
 
 const renderComponent = (extraProps = {}) => {
   const props = lodash.merge({
@@ -40,17 +41,11 @@ const renderComponent = (extraProps = {}) => {
   return props;
 };
 
-const i18next = jest.genMockFromModule('react-i18next');
-i18next.t = i => i;
-i18next.translate = c => k => k;
 describe('<ToolbarComponent />', () => {
-  const msg = i18next.t('Toolbar.OpenPreferencesARIA');
-  console.log(msg);
-
   it('sketch owner can switch to sketch name editing mode', async () => {
     const props = renderComponent();
-    const sketchName = screen.getByLabelText('Edit sketch name');
-
+    // const sketchName = screen.getByLabelText('Edit sketch name');
+    const sketchName = screen.getByTestId('edit-sketch');
     fireEvent.click(sketchName);
 
     await waitFor(() => expect(props.showEditProjectName).toHaveBeenCalled());
@@ -58,8 +53,8 @@ describe('<ToolbarComponent />', () => {
 
   it('non-owner can\t switch to sketch editing mode', async () => {
     const props = renderComponent({ currentUser: 'not-me' });
-    const sketchName = screen.getByLabelText('Edit sketch name');
-
+    // const sketchName = screen.getByLabelText('Edit sketch name');
+    const sketchName = screen.getByTestId('edit-sketch');
     fireEvent.click(sketchName);
 
     expect(sketchName).toBeDisabled();
@@ -69,7 +64,8 @@ describe('<ToolbarComponent />', () => {
   it('sketch owner can change name', async () => {
     const props = renderComponent({ project: { isEditingName: true } });
 
-    const sketchNameInput = screen.getByLabelText('New sketch name');
+    // const sketchNameInput = screen.getByLabelText('New sketch name');
+    const sketchNameInput = screen.getByTestId('new-sketch');
     fireEvent.change(sketchNameInput, { target: { value: 'my new sketch name' } });
     fireEvent.blur(sketchNameInput);
 
@@ -80,7 +76,9 @@ describe('<ToolbarComponent />', () => {
   it('sketch owner can\'t change to empty name', async () => {
     const props = renderComponent({ project: { isEditingName: true } });
 
-    const sketchNameInput = screen.getByLabelText('New sketch name');
+    // const sketchNameInput = screen.getByLabelText('New sketch name');
+    const sketchNameInput = screen.getByTestId('new-sketch');
+
     fireEvent.change(sketchNameInput, { target: { value: '' } });
     fireEvent.blur(sketchNameInput);
 
