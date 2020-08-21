@@ -5,7 +5,6 @@ import { withRouter } from 'react-router';
 import { Link } from 'react-router';
 import classNames from 'classnames';
 import { withTranslation } from 'react-i18next';
-import i18next from 'i18next';
 import { languageKeyToLabel } from '../i18n';
 import * as IDEActions from '../modules/IDE/actions/ide';
 import * as toastActions from '../modules/IDE/actions/toast';
