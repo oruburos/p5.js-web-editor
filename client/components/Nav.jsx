@@ -806,7 +806,7 @@ Nav.propTypes = {
   }),
   t: PropTypes.func.isRequired,
   setLanguage: PropTypes.func.isRequired,
-  language: PropTypes.string.isRequired,
+  language: PropTypes.string,
 };
 
 Nav.defaultProps = {
@@ -819,7 +819,8 @@ Nav.defaultProps = {
   warnIfUnsavedChanges: undefined,
   params: {
     username: undefined
-  }
+  },
+  language: 'en-US'
 };
 
 function mapStateToProps(state) {
